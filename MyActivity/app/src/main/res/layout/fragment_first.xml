@@ -93,13 +93,24 @@
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="355dp"
+        android:layout_marginTop="328dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="您的手牌"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.myactivity.MjView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="372dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.example.myactivity.MjView>
 
     <EditText
         android:id="@+id/resultDisplayLaybel"
@@ -130,10 +141,14 @@
         android:id="@+id/doCalcMj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="286dp"
-        android:layout_marginLeft="286dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="480dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
         android:text="计算"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
