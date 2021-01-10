@@ -61,14 +61,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/toCalcPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
         android:layout_marginLeft="148dp"
         android:layout_marginTop="646dp"
         android:layout_marginBottom="37dp"
-        android:text="@string/next"
+        android:text="打哪张牌"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -88,7 +88,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/mjDisplayLaybel"
         android:layout_width="91dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -102,7 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/resultDisplayLaybel"
         android:layout_width="91dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/resultDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="66dp"
@@ -127,13 +127,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/calculate"
+        android:id="@+id/doCalcMj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="286dp"
         android:layout_marginLeft="286dp"
         android:layout_marginTop="408dp"
-        android:text="calculate"
+        android:text="计算"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

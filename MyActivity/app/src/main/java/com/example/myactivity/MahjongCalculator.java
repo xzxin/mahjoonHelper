@@ -58,7 +58,11 @@ public class MahjongCalculator {
         if (isSevenPairs(tempMjs)) {
             return true;
         }
-        if (inputMjAtHand.size() == 1) {
+        return isWinningPremitive(type, tempMjs);
+    }
+
+    public static boolean isWinningPremitive(String type, Map<String, List<Integer>> tempMjs) {
+        if (tempMjs.size() == 1) {
             return isValidate(tempMjs.get(type), true);
         }
         String otherType = "";
@@ -117,7 +121,7 @@ public class MahjongCalculator {
         return "当前牌型已经听牌， 胡" + resultMjStr;
     }
 
-    private static String getMjString(Map<String, List<Integer>> mjInput) {
+    public static String getMjString(Map<String, List<Integer>> mjInput) {
         StringBuilder sb = new StringBuilder();
         for (String type : mjInput.keySet()) {
             List<Integer> mjs = mjInput.get(type);
@@ -153,7 +157,7 @@ public class MahjongCalculator {
         }
         matcher = pattern.matcher(tongInputStr);
         if (matcher.find()) {
-            String tongStr = matcher.group(1);
+            String tongStr = matcher.group(0);
             ArrayList<Integer> tongInput = new ArrayList<>();
             for (int i = 0; i < tongStr.length(); i++) {
                 tongInput.add(tongStr.charAt(i) - '0');

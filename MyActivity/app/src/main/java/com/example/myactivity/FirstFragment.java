@@ -1,6 +1,8 @@
 package com.example.myactivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +35,7 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View globalView, Bundle savedInstanceState) {
         super.onViewCreated(globalView, savedInstanceState);
 
-        globalView.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
+        globalView.findViewById(R.id.toCalcPlay).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
@@ -41,39 +43,63 @@ public class FirstFragment extends Fragment {
             }
         });
         EditText wanInput = (EditText) globalView.findViewById(R.id.wan_input);
-        wanInput.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        wanInput.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                if (!b) {
-                    calculator.setWanInput(wanInput.getText().toString());
-                }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                calculator.setWanInput(wanInput.getText().toString());
             }
         });
         EditText tiaoInput = (EditText) globalView.findViewById(R.id.tiao_input);
-        tiaoInput.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        tiaoInput.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                if (!b) {
-                    calculator.setTiaoInput(tiaoInput.getText().toString());
-                }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                calculator.setTiaoInput(tiaoInput.getText().toString());
             }
         });
         EditText tongInput = (EditText) globalView.findViewById(R.id.tong_input);
-        tongInput.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        tongInput.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onFocusChange(View view, boolean b) {
-                if (!b) {
-                    calculator.setTongInput(tongInput.getText().toString());
-                }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                calculator.setTongInput(tongInput.getText().toString());
             }
         });
-        Button calcBtn = (Button) globalView.findViewById(R.id.calculate);
+        Button calcBtn = (Button) globalView.findViewById(R.id.doCalcMj);
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 result = calculator.doCalculation();
                 String resultStr = calculator.showResult(result);
-                TextView resultView = (TextView) globalView.findViewById(R.id.result);
+                TextView resultView = (TextView) globalView.findViewById(R.id.resultDisplay);
                 resultView.setText(resultStr);
             }
         });
