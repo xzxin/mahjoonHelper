@@ -102,6 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.myactivity.MjView
+        android:id="@+id/myMjAtHand"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"

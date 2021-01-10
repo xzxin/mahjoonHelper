@@ -18,6 +18,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.example.myactivity.MahjongCalculator.formatInput;
+
 public class FirstFragment extends Fragment {
     private MahjongCalculator calculator;
     private Map<String, List<Integer>> result = new HashMap<>();
@@ -97,6 +99,11 @@ public class FirstFragment extends Fragment {
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MjView mjDisplay = globalView.findViewById(R.id.myMjAtHand);
+                Map<String, List<Integer>> mjInput =
+                        formatInput(calculator.getWanInput(), calculator.getTiaoInput(), calculator.getTongInput());
+                mjDisplay.setToDrawMjs(mjInput);
+                mjDisplay.invalidate();
                 result = calculator.doCalculation();
                 String resultStr = calculator.showResult(result);
                 TextView resultView = (TextView) globalView.findViewById(R.id.resultDisplay);
