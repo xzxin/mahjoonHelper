@@ -144,6 +144,7 @@ public class MahjongCalculator {
             for (int i = 0; i < wanStr.length(); i++) {
                 wanInput.add(wanStr.charAt(i) - '0');
             }
+            Collections.sort(wanInput);
             input.put("万", wanInput);
         }
         matcher = pattern.matcher(tiaoInputStr);
@@ -153,6 +154,7 @@ public class MahjongCalculator {
             for (int i = 0; i < tiaoStr.length(); i++) {
                 tiaoInput.add(tiaoStr.charAt(i) - '0');
             }
+            Collections.sort(tiaoInput);
             input.put("条", tiaoInput);
         }
         matcher = pattern.matcher(tongInputStr);
@@ -162,6 +164,7 @@ public class MahjongCalculator {
             for (int i = 0; i < tongStr.length(); i++) {
                 tongInput.add(tongStr.charAt(i) - '0');
             }
+            Collections.sort(tongInput);
             input.put("筒", tongInput);
         }
         return input;

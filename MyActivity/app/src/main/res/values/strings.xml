@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyActivity</string>
+    <string name="app_name">川麻助手</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -9,6 +9,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="funtion_calc">计算番数</string>
+    <string name="funtion_calc">计算胡牌</string>
     <string name="funtion_choose">打哪张牌</string>
 </resources>
